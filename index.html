@@ -1,21 +1,18 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="UTF-8" />
-    <meta
-      http-equiv="Content-Security-Policy"
-      content="default-src 'self'; script-src 'self'"
-    />
-    <meta
-      http-equiv="X-Content-Security-Policy"
-      content="default-src 'self'; script-src 'self'"
-    />
-    <title>Hello from Electron renderer!</title>
-  </head>
-  <body>
-    <h1>Hello from Electron renderer!</h1>
-    <p>👋</p>
-    <p id="info"></p>
-  </body>
-  <script src="./renderer.js"></script>
+<head>
+    <meta charset="UTF-8">
+    <title>Metronome</title>
+</head>
+<body>
+    <h1>Metronome</h1>
+    <div>
+        <input type="range" id="bpm-slider" min="40" max="200" value="120">
+        <span id="bpm-display">120 BPM</span>
+    </div>
+    <button onclick="startMetronome()">Start</button>
+    <button onclick="stopMetronome()">Stop</button>
+
+    <script src="renderer.js"></script>
+</body>
 </html>
