@@ -3,6 +3,24 @@
 <head>
     <meta charset="UTF-8">
     <title>Metronome</title>
+    <style>
+        #pendulum {
+            width: 20px;
+            height: 20px;
+            background-color: black;
+            position: absolute;
+            left: 50%;
+            top: 10px;
+            transform-origin: top;
+            animation: swing ease-in-out infinite;
+        }
+
+        @keyframes swing {
+            0% { transform: rotate(-20deg); }
+            50% { transform: rotate(20deg); }
+            100% { transform: rotate(-20deg); }
+        }
+    </style>
 </head>
 <body>
     <h1>Metronome</h1>
@@ -12,6 +30,7 @@
     </div>
     <button onclick="startMetronome()">Start</button>
     <button onclick="stopMetronome()">Stop</button>
+    <div id="pendulum"></div>
 
     <script src="renderer.js"></script>
 </body>
